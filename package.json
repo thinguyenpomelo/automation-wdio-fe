@@ -1,0 +1,35 @@
+{
+  "name": "automation-wdio-fe",
+  "version": "1.0.0",
+  "description": "This is repository for webdriver  io demo for web, iOS and Android app automation front end",
+  "main": "index.js",
+  "scripts": {
+    "test:android": "./node_modules/.bin/wdio wdio.android.conf.js",
+    "test:web": "./node_modules/.bin/wdio wdio.web.conf.js",
+    "test:ios": "./node_modules/.bin/wdio wdio.ios.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinguyenpomelo/automation-wdio-fe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinguyenpomelo/automation-wdio-fe/issues"
+  },
+  "homepage": "https://github.com/thinguyenpomelo/automation-wdio-fe#readme",
+  "dependencies": {
+    "@wdio/appium-service": "^7.19.1",
+    "@wdio/cli": "^7.19.1",
+    "@wdio/cucumber-framework": "^7.19.3"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^7.19.2",
+    "@wdio/mocha-framework": "^7.19.2",
+    "@wdio/selenium-standalone-service": "^7.19.1",
+    "@wdio/spec-reporter": "^7.19.1",
+    "chromedriver": "^99.0.0",
+    "wdio-chromedriver-service": "^7.3.2"
+  }
+}
