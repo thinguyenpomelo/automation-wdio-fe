@@ -1,14 +1,12 @@
-Feature: To test the login functionality in Pomelo website
+Feature: The Internet Guinea Pig Website
 
-Background:
-    Given the user is open Pomelo page
-    And the user is on login page
+  Scenario Outline: As a user, I can log into the secure area
 
-Scenario: The one where user logs in using valid credentials
-    When the user enters email as "<email>" and password as "<password>"
-    And clicks on login button
-    Then the user must see message Welcome "<first_name>"
+    Given I am on the login page
+    When I login with <username> and <password>
+    Then I should see a flash message saying <message>
 
-Examples:
-        | email                        | password     | first_name |
-        | thihuyenguyen1205@gmail.com  | Pomelo123!   | Thi        |
+    Examples:
+      | username | password             | message                        |
+      | tomsmith | SuperSecretPassword! | You logged into a secure area! |
+      | foobar   | barfoo               | Your username is invalid!      |
